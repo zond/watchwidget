@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="cx.ath.troja.android.watchwidget"
+	  android:versionCode="7"
+	  android:versionName="2.4">
+  <uses-sdk android:minSdkVersion="7" />
+  <application android:label="@string/watch_widget_app_name" android:icon="@drawable/watch_widget_icon">
+    <activity android:name="cx.ath.troja.android.watchwidget.WatchWidgetConfiguration"
+	      android:label="@string/watch_widget_app_name"
+	      android:icon="@drawable/watch_widget_icon">
+      <intent-filter>
+	<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+      </intent-filter>
+    </activity>
+    <activity android:name="cx.ath.troja.android.watchwidget.WatchWidgetConfiguration"
+	      android:label="@string/watch_widget_app_name"
+	      android:icon="@drawable/watch_widget_icon">
+      <intent-filter>
+	<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+	<data android:scheme="watch_widget" />
+      </intent-filter>
+    </activity>
+    <receiver android:name="cx.ath.troja.android.watchwidget.WatchWidgetProvider" 
+	      android:label="@string/watch_widget_app_name"
+	      android:icon="@drawable/watch_widget_icon">
+      <intent-filter>
+	<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider"
+		 android:resource="@xml/watch_widget_info" />
+    </receiver>    
+    <receiver android:name="cx.ath.troja.android.watchwidget.WatchWidgetProvider"
+	      android:label="@string/watch_widget_app_name"
+	      android:icon="@drawable/watch_widget_icon">
+      <intent-filter>
+	<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+	<data android:scheme="watch_widget" />
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider"
+		 android:resource="@xml/watch_widget_info" />
+    </receiver>
+    <service android:name="cx.ath.troja.android.watchwidget.WatchWidgetService" 
+	     android:exported="false"
+	     android:process="cx.ath.troja.android.watchwidget.WatchWidget"
+	     android:label="@string/watch_widget_app_name"
+	     android:icon="@drawable/watch_widget_icon" />
+  </application>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.READ_LOGS"/>
+</manifest> 

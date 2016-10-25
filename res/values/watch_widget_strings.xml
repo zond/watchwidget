@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="watch_widget_app_name">WatchWidget</string>
+  <string name="watch_widget_save_config">Save configuration</string>
+  <string name="watch_widget_watch_path">Path to watch</string>
+  <string name="watch_widget_watch_regexp">Regular expression</string>
+  <string name="watch_widget_watch_replacement">Replacement</string>
+  <string name="watch_widget_watch_interval">Interval between updates</string>
+  <string name="watch_widget_watch_command">Command to watch</string>
+  <string name="watch_widget_watch_alpha">Alpha of widget (0-255)</string>
+  <string name="watch_widget_watch_type">Type of watcher</string>
+  <string-array name="watch_widget_watch_types_array">
+    <item>File</item>
+    <item>Command</item>
+  </string-array>
+  <string name="watch_widget_watch_font_size">Font size</string>
+  <string name="watch_widget_watch_font_color">Font color (AARRGGBB hex)</string>
+  <string name="watch_widget_watch_background_color">Background color (AARRGGBB hex)</string>
+</resources>
